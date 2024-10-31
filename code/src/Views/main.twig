@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{{ title }}</title>
+
+		{% block styles %}
+			<link rel="stylesheet" href="/css/style.css"/>
+		{% endblock %}
+
+	</head>
+	<body>
+		{% block header %}
+		<header>
+			<h1>Мой сайт</h1>
+			<nav>
+				<a href="/">Главная</a>
+				<a href="/user">Пользователи</a>
+				<a href="/about">О нас</a>
+			</nav>
+		</header
+		{% endblock %}
+		
+		{% block content %}
+			{% include content_template_name %}
+		{% endblock %}
+		{% block sidebar %}
+			<aside>
+				<h2>Меню</h2>
+				<ul>
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+			</aside>
+		{% endblock %}
+		{% block footer %}
+			<footer>
+				&copy; 2024 Мой сайт
+			</footer>
+		{% endblock %}
+
+		
+	</body>
+</html>
